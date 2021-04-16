@@ -1,0 +1,8 @@
+[package]
+name = "first-rust-docker"
+version = "0.0.1"
+authors = ["Gaetano D'Orsi <olimpusdrs@gmail.com>"]
+
+[dependencies]
+chrono = "0.4"
+rand = "0.8.3"
