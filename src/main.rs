@@ -4,7 +4,7 @@ extern crate rand;
 use std::sync::mpsc::channel;
 use std::thread;
 use std::time::Duration;
-use rand::{distributions::Alphanumeric, Rng}; // 0.8
+use rand::{distributions::Alphanumeric, Rng}; 
 
 use chrono::prelude::{Utc};
 
@@ -18,10 +18,8 @@ fn generate_string() -> String{
 }
 
 fn main() {
-    // Create channels for sending and receieving
     let (five_tx, five_rx) = channel();
 
-    // Spawn five second timer
     thread::spawn(move || {
         loop {
             thread::sleep(Duration::from_secs(5));
