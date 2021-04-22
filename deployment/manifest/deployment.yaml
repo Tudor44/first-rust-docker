@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: first-docker-rust-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: first-docker-rust
+  template:
+    metadata:
+      labels:
+        app: first-docker-rust
+    spec:
+      containers:
+        - name: first-docker-rust
+          image: ggdorsi4/first-rust-docker
